@@ -2,14 +2,15 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
+      <link href="style.css" rel="stylesheet">
       <title>Todos</title>
    </head>
    <body>
       <header class="todos-header">todos</header>
       <main class="todo-list">
          <div class="todo-list__head list-head">
-               <button class="list-head__select-all">Select all
-               tasks</button>
+            <button class="list-head__select-all">Select all
+            tasks</button>
             <div class="list-head__create-new">
                <input type="text" class="list-head__create-new-input" placeholder="What needs to be done?" aria-label="Add new item" autofocus="autofocus" />
             </div>
@@ -18,7 +19,10 @@
             <ul class="todo-list__task-list tasks">
                <li class="todo-list__task-item task-item">
                   <div class="task-item__view">
-                     <input type="checkbox" class="task-item__check" aria-label="HTML complited" />
+                     <input type="checkbox" class="task-item__checkbox" aria-label="HTML complited"
+                        id="html"/>
+                     <label class="task-item__check" for="html">
+                     </label>
                      <span class="task-item__text">HTML</span>
                      <button class="task-item__delete">Delete task</button>
                   </div>
@@ -27,8 +31,9 @@
                   </div>
                </li>
                <li class="todo-list__task-item task-item">
-                  <div class="task-item__view">
-                     <input type="checkbox" class="task-item__check" aria-label="CSS complited"/>
+                  <div class="task-item__view">   
+                     <input type="checkbox" class="task-item__checkbox" id="css" aria-label="CSS complited"/>
+                     <label class="task-item__check" for="css"></label>
                      <span class="task-item__text">CSS</span>
                      <button class="task-item__delete">Delete task</button>
                   </div>
@@ -37,8 +42,8 @@
                   </div>
                </li>
                <li class="todo-list__task-item task-item">
-                  <div class="task-item__view">
-                     <input type="checkbox" class="task-item__check" aria-label="JS complited"/>
+                  <div class="task-item__view">   <input type="checkbox" class="task-item__checkbox" id="js" aria-label="JS complited"/>
+                     <label class="task-item__check" for="js"></label> 
                      <span class="task-item__text">JS</span>
                      <button class="task-item__delete">Delete task</button>
                   </div>
@@ -48,7 +53,8 @@
                </li>
                <li class="todo-list__task-item task-item">
                   <div class="task-item__view">
-                     <input type="checkbox" class="task-item__check" aria-label="JS tools complited"/>
+                     <input type="checkbox" class="task-item__checkbox" aria-label="JS tools complited" id="js_tools"/>
+                     <label class="task-item__check" for="js_tools"></label>
                      <span class="task-item__text">JS tools</span>
                      <button class="task-item__delete">Delete task</button>
                   </div>
