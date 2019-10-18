@@ -1,0 +1,15 @@
+.task-filter{
+    display: flex;
+}
+.task-filter__input{
+    width: 0;
+}
+.task-filter__text{
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: transparent;
+}
+.task-filter__input:checked + .task-filter__text{
+    border-color: #E6E6E6;
+}

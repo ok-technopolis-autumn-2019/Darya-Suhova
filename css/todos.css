@@ -1,0 +1,13 @@
+html, body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    font-family: "Roboto", sans-serif;
+    background-color:rgba(0, 0, 0, 0.0001);
+    color: #CCCCCC;
+}
+.todos-header{
+    font-size: 100px;
+    letter-spacing: -2.5px;
+}

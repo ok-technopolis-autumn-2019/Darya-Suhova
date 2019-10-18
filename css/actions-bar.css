@@ -1,0 +1,21 @@
+.actions-bar{
+    display: flex;
+    justify-content: space-between;
+
+    height: 43px;
+    font-size: 14px;
+    letter-spacing: -0.35px;
+    color: #888888;
+    box-shadow:inset 0px 1px 0px #E6E6E6;
+}
+.actions-bar__item{
+    padding:0px 12px 0px 12px;
+    align-self: center;
+}
+.task-clear{
+    border: none;
+    background-color: white;
+    color: #888888;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
