@@ -1,0 +1,22 @@
+.actions-bar{
+    display: flex;
+    justify-content: space-between;
+    
+    height: 43px;
+    font-size: 14px;
+    color: #888888;
+    border-top: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    margin: -1px -1px 0 0;
+}
+.actions-bar__item{
+    padding:0px 12px 0px 12px;
+    align-self: center;
+}
+.task-clear{
+    border: none;
+    background-color: white;
+    color: #888888;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,8 @@
+.todo-list__tasks{
+    flex-grow: 1;
+}
+.tasks{
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
