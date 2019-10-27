@@ -1,0 +1,19 @@
+@import "_vars.styl"
+@import "_mixins.styl"
+
+.task-filter{
+  display: flex;
+}
+.task-filter__input{
+  invisible_block();
+
+  &:checked +.task-filter__text{
+    border-color: $border_color.task;
+  }
+}
+.task-filter__text{
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: transparent;
+}

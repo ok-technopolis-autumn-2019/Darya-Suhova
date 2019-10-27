@@ -1,0 +1,70 @@
+@import "_vars.styl"
+@import "_mixins.styl"
+
+.todo-list__task-item{
+  display: flex;
+  align-items: center;
+
+  color:$text_color.task;
+  min-height: 64px;
+  border-bottom: 1px solid $border_color.task;
+  box-sizing: border-box;
+  font-size: $fsize.m;
+
+  &:focus-within,
+  &:hover{
+    background: $background_color.task_hover;
+  }
+}
+
+.task-item__view{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.task-item__checkbox{
+  invisible_block();
+
+  &:checked + .task-item__check{
+    border-color: $border_color.checkbox;
+    background_img(url(../icons/check.svg));
+  }
+  &:checked ~ .task-item__text{
+    color: $text_color.checked;
+    text-decoration-line: line-through;
+  }
+  &:focus + .task-item__check{
+    border-width:2px;
+  }
+}
+.task-item__check{
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $background_color.task;
+  border: 1px solid #CCCCCC;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.task-item:hover .task-item__delete{
+  opacity: 1;
+}
+.task-item__text{
+  width: 440px;
+  height: 100%;
+  padding: 10px;
+}
+.task-item__delete{
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border: 0;
+  font-size: 0;
+  background_img(url(../icons/del.svg));
+  opacity: 0;
+  &:focus{
+    opacity: 1;
+  }
+}

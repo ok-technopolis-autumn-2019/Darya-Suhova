@@ -1,0 +1,33 @@
+@import "_vars.styl"
+@import "_mixins.styl"
+
+.todo-list__head{
+  display: flex;
+  min-height: 66px;
+  box-shadow: inset 0px -1px 0px $colors.light_gray_3;
+}
+.list-head__select-all{
+  width: 60px;
+  border: 0;
+  font-size: 0;
+  background_img(url(../icons/select.svg));
+}
+.list-head__create-new{
+  display: flex;
+  height: 63px;
+  flex-grow: 1;
+}
+.list-head__create-new-input{
+  height: 100%;
+  flex-grow: 1;
+  border:0;
+  font-family: $font_family_main;
+  font-size: $fsize.m;
+  color: $text_color.task;
+
+  &::placeholder{
+    font-style: italic;
+    font-size: $fsize.m;
+    color: $text_color.header;
+  }
+}
