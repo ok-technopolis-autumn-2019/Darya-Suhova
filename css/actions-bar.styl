@@ -1,0 +1,24 @@
+@import "_vars.styl"
+
+.actions-bar{
+  display: flex;
+  justify-content: space-between;
+
+  height: 43px;
+  font-size: $fsize.s;
+  color: $text_color.action_bar;
+  border-top: 1px solid $border_color.task;
+  box-sizing: border-box;
+  margin: -1px -1px 0 0;
+}
+.actions-bar__item{
+  padding:0px 12px 0px 12px;
+  align-self: center;
+}
+.task-clear{
+  border: none;
+  background-color:  $background_color.task;
+  color: $text_color.action_bar;
+  font-size: $fsize.s;
+  font-family: $font_family_main;
+}

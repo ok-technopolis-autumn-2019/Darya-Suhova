@@ -1,7 +1,194 @@
-@import "actions-bar.css";
-@import "task-filter.css";
-@import "task-item.css";
-@import "tasks.css";
-@import "todo-list.css";
-@import "todo-list__head.css";
-@import "todos.css";
+html,
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0,0,0,0);
+  color: #ccc;
+}
+.todos-header {
+  font-size: 100px;
+}
+.todo-list__tasks {
+  flex-grow: 1;
+}
+.tasks {
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+}
+.todo-list__head {
+  display: flex;
+  min-height: 66px;
+  box-shadow: inset 0px -1px 0px #e6e6e6;
+}
+.list-head__select-all {
+  width: 60px;
+  border: 0;
+  font-size: 0;
+  background-image: url("../icons/select.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+.list-head__create-new {
+  display: flex;
+  height: 63px;
+  flex-grow: 1;
+}
+.list-head__create-new-input {
+  height: 100%;
+  flex-grow: 1;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #666;
+}
+.list-head__create-new-input::placeholder {
+  font-style: italic;
+  font-size: 24px;
+  color: #ccc;
+}
+.todo-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: relative;
+  width: 562px;
+  min-height: 402px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.todo-list:before {
+  height: 5px;
+  width: 558px;
+  position: absolute;
+  top: 100%;
+  left: 2px;
+  content: "";
+  background-color: #fff;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  z-index: -1;
+}
+.todo-list:after {
+  height: 10px;
+  width: 554px;
+  position: absolute;
+  top: 100%;
+  left: 4px;
+  content: "";
+  background-color: #fff;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  z-index: -2;
+}
+.todo-list__task-item {
+  display: flex;
+  align-items: center;
+  color: #666;
+  min-height: 64px;
+  border-bottom: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+.todo-list__task-item:focus-within,
+.todo-list__task-item:hover {
+  background: #fafafa;
+}
+.task-item__view {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.task-item__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.task-item__checkbox:checked + .task-item__check {
+  border-color: #5dc2af;
+  background-image: url("../icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+.task-item__checkbox:checked ~ .task-item__text {
+  color: #ccc;
+  text-decoration-line: line-through;
+}
+.task-item__checkbox:focus + .task-item__check {
+  border-width: 2px;
+}
+.task-item__check {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.task-item:hover .task-item__delete {
+  opacity: 1;
+}
+.task-item__text {
+  width: 440px;
+  height: 100%;
+  padding: 10px;
+}
+.task-item__delete {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border: 0;
+  font-size: 0;
+  background-image: url("../icons/del.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  opacity: 0;
+}
+.task-item__delete:focus {
+  opacity: 1;
+}
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  margin: -1px -1px 0 0;
+}
+.actions-bar__item {
+  padding: 0px 12px 0px 12px;
+  align-self: center;
+}
+.task-clear {
+  border: none;
+  background-color: #fff;
+  color: #888;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.task-filter {
+  display: flex;
+}
+.task-filter__input {
+  position: absolute;
+  left: -9999px;
+}
+.task-filter__input:checked +.task-filter__text {
+  border-color: #e6e6e6;
+}
+.task-filter__text {
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: transparent;
+}

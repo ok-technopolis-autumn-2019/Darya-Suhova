@@ -1,0 +1,27 @@
+@import "_vars.styl"
+
+invisible_block() {
+  position: absolute;
+  left: -9999px;
+}
+
+background_img(img) {
+  background-image: img;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+todo-list_bottom_shadow(width,height,left,z) {
+  height: height;
+  width: width;
+
+  position: absolute;
+  top:100%;
+  left:left;
+  content: "";
+  background-color: $background_color.task;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  z-index:z;
+}

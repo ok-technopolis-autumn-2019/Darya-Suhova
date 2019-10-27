@@ -1,0 +1,22 @@
+@import "_vars.styl"
+
+.todo-list{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: relative;
+
+  width: 562px;
+  min-height: 402px;
+  background-color: $background_color.task;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:before{
+    todo-list_bottom_shadow(558px,5px,2px,-1);
+  }
+  &:after{
+    todo-list_bottom_shadow(554px,10px,4px,-2);
+  }
+}
+
